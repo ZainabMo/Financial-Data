@@ -17,7 +17,7 @@ spec:
         spec:
             containers:
             - name: financial-data
-              image: financial-data:dev2.0
+              image: financial-data:dev2.2
               imagePullPolicy: IfNotPresent
               ports:
               - containerPort: 8080
