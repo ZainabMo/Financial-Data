@@ -2,6 +2,7 @@ package com.ssci.financialdata.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.List;
 
 import lombok.Data;
 
@@ -34,5 +35,14 @@ public class FinancialData {
         "FinancialData[id='%s', user_id='%s']",
         id, userId);
   }
-
+  public static List<FinancialData> hideId(List<FinancialData> finDataList){
+    for(FinancialData finData : finDataList){
+      finData.setId(null);
+    }
+    return finDataList;
+  }
+  public static FinancialData hideId(FinancialData finData){
+    finData.setId(null);
+    return finData;
+  }
 }

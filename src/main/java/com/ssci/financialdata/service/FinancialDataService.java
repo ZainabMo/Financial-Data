@@ -18,17 +18,22 @@ public class FinancialDataService{
     public long getCount(){
         return repository.count();
     }
+    //change all so id is not printed
     public List<FinancialData> findAll(){
-        return repository.findAll();
+        List<FinancialData> all = repository.findAll();
+        return FinancialData.hideId(all);
     }
     public List<FinancialData> findByDate(int date){
-        return repository.findByDate(date);
+        List<FinancialData> all = repository.findByDate(date);
+        return FinancialData.hideId(all);
     }
     public List<FinancialData> findByUserId(String uId){
-        return repository.findByUserId(uId);
+        List<FinancialData> all = repository.findByUserId(uId);
+        return FinancialData.hideId(all);
     }
     public FinancialData findById(String id){
-        return repository.findById(id).get();
+        FinancialData result = repository.findById(id).get();
+        return FinancialData.hideId(result);
     }
     public FinancialData addFinancialData(FinancialDataVO financialDataVO){
         FinancialData financialData = new FinancialData();

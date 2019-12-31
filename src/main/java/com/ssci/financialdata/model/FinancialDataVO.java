@@ -2,6 +2,7 @@ package com.ssci.financialdata.model;
 
 import org.springframework.data.annotation.Id;
 
+
 import lombok.Data;
 
 @Data
@@ -32,5 +33,6 @@ public class FinancialDataVO {
         "FinancialDataVO[id=%s, totalAssets='%s', netLoans='%s', user_id='%s', grossLoans='%s', date='%s']",
         id, totalAssets, netLoans, userId, grossLoans, date);
   }
-//amke private
+  
+  
 }

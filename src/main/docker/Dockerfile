@@ -2,6 +2,7 @@ FROM docker.io/openjdk:8u171-jre
 
 ENV USER_NAME docker
 ENV APP_HOME /home/$USER_NAME/app
+ENV ACTIVE_PROFILE=localdev
 
 RUN useradd -ms /bin/bash $USER_NAME && mkdir $APP_HOME
 

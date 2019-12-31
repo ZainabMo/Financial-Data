@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-java -Dspring.config.location=file:application.properties -jar app.jar
+java -Dspring.profiles.active=$ACTIVE_PROFILE -jar app.jar
